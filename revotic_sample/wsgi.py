@@ -1,5 +1,5 @@
 """
-WSGI config for django-rest-api-for-ipfs-storage project.
+WSGI config for revotic_sample project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django-rest-api-for-ipfs-storage.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'revotic_sample.settings')
 
 application = get_wsgi_application()

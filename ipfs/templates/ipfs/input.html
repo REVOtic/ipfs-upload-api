@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form  action="node_status" method="post" enctype="multipart/form-data">
+ {% csrf_token %}
+     
+    <input type="submit" name="submit"  value="Check Node Status"></form><br><br>
+
+<form  action="result_upload" method="post" enctype="multipart/form-data">
+ {% csrf_token %}
+     <label>Enter User Id </label><br>
+    <input type="text" name="User_Id" class="field-long" placeholder="Ipfs Id" /><br>
+    <label>Enter File name</label><br>
+    <input type="text" name="File_name" class="field-long" placeholder="blabla.txt" /><br>
+    <label>Enter File type</label><br>
+    <input type="text" name="File_type" class="field-long" placeholder="audio/video/picture/text file etc" /><br>
+    <label>Upload File</label><br>
+    <input type="file" name="File" size="400"><br>
+    <input type="submit" name="submit"  value="Upload File"></form><br><br>
+<form  action="hash_upload" method="post" enctype="multipart/form-data">
+ {% csrf_token %}
+     <label>Enter User Id </label><br>
+    <input type="text" name="User_Id" class="field-long" placeholder="Ipfs Id" /><br>
+    <label>Enter File name</label><br>
+    <input type="text" name="File_name" class="field-long" placeholder="blabla.txt" /><br>
+    <label>Enter File type</label><br>
+    <input type="text" name="File_type" class="field-long" placeholder="audio/video/picture/text file etc" /><br>
+    <label>Enter File Hash</label><br>
+    <input type="text" name="File_hash" class="field-long" placeholder="Enter file hash" /><br>    
+    <input type="submit" name="submit"  value="Upload File iwith hash"></form><br><br>
+
+<form  action="result_delete" method="post" enctype="multipart/form-data">
+ {% csrf_token %}
+    <label>Enter User Id </label><br>
+    <input type="text" name="User_Id" class="field-long" placeholder="Ipfs Id" /><br>
+    <label>Enter File Hash</label><br>
+    <input type="text" name="File_hash" class="field-long" placeholder="hash" /><br>
+    <input type="submit" name="submit"  value="Delete File">
+</form>
+</body>
+</html>
